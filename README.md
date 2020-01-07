@@ -2,7 +2,8 @@
 M Tech - DSE DSAD assignment 126 for SEM1
 
 Developer :
-| Anand R K |Kamran Ali |Pratik Prakash |
+
+Anand R K , Kamran Ali , Pratik Prakash
 
 | Priority Order  | Feature |Owner |Reviewer |Status|
 | ------------- | ------------- |------------- |------------- |------------- |
