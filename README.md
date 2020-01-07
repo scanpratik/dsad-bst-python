@@ -2,13 +2,11 @@
 M Tech - DSE DSAD assignment 126 for SEM1
 
 Developer :
-Anand R K
-Kamran Ali
-Pratik Prakash
+| Anand R K |Kamran Ali |Pratik Prakash |
 
 | Priority Order  | Feature |Owner |Reviewer |Status|
 | ------------- | ------------- |------------- |------------- |------------- |
-| 1  | Binary Tree ADT Creation and Abstract Operation  |Pratik  |Kamran  |-  |
+| 1  | Binary Tree ADT Creation and Abstract Operation  |Pratik  |Kamran  | Done |
 | 1  | Sample Test & Inout file creation  |Anand  |Pratik  |-  |
 | 4  | Complexity Analysis  |Kamran  |Anand  |-  |
 | 2  | def _readBookList(self, bkID, availCount)  |Pratik  |Anand  |-  |
