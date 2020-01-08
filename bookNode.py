@@ -27,12 +27,35 @@ class bookNode:
     def PrintTree(self):
         if self.left:
             self.left.PrintTree()
-        print( self.bookId +' -- ' + self.availCount)
+        print( str(self.bookId) +' -- ' + str(self.availCount))
         if self.right:
             self.right.PrintTree()     
     
-    def chkInChkOut(self, bkID, inOut):
-        pass
+    def _chkInChkOut(self, bkID, inOut):
+        if (inOut == "checkOut"):
+            self._traverseTreeAndUpdate(bkID, inOut)
+        else:
+            self._traverseTreeAndUpdate(bkID, inOut)
+
+    
+    def _traverseTreeAndUpdate(self, bkID, inOut):
+
+        if self.bookId == bkID:
+            if (inOut == "checkOut"):
+                if (self.availCount == 0):
+                    raise InvalidOperationException("Can Not checkOut when availCount is 0")
+                else:
+                    self.availCount -= 1
+                    self.checkoutCount +=1
+                    return
+            elif (inOut == "checkIn"):
+                self.availCount += 1
+                return
+        if self.left:
+            self.left._traverseTreeAndUpdate(bkID, inOut)
+        if self.right:
+            self.right._traverseTreeAndUpdate(bkID, inOut)
+          
     
     def getTopBooks(self, bkNode):
         pass
@@ -48,3 +71,5 @@ class bookNode:
     
     def printBooks(self, bkNode):
         pass
+
+class InvalidOperationException(Exception): pass
