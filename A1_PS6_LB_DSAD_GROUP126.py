@@ -33,13 +33,13 @@ class bookNode:
             self.bookId = bkId
             self.availCount = availCount
         return None
-   #TODO -- this method id just for testing , will remove later on .
-    def PrintTree(self):
+   #Retriving book details from this libraray system as IN-ORDER traversal
+    def printBooks(self):
         if self.left:
-            self.left.PrintTree()
+            self.left.printBooks()
         print( self.bookId +' -- ' + self.availCount)
         if self.right:
-            self.right.PrintTree()     
+            self.right.printBooks()       
     
     def chkInChkOut(self, bkID, inOut):
         pass
