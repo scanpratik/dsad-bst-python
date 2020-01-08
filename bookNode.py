@@ -37,6 +37,18 @@ class bookNode:
             self.right._printBooks()  
         outFile.close()    
     
+    def _notIssued(self, bkNode):
+        outFile = open('outputPS6.txt', 'w')
+        outFile = open('outputPS6.txt', 'a')
+        if self.bookId:
+            if (self.checkoutCount == 0):
+                outFile.write(self.bookId +', '+ self.availCount)
+        if self.left:
+            self.left._notIssued('')
+        if self.right:
+            self.right._notIssued('')
+        outFile.close()
+    
     def _chkInChkOut(self, bkID, inOut):
         if (inOut == "checkOut"):
             self._traverseTreeAndUpdate(bkID, inOut)
