@@ -24,3 +24,12 @@ Anand R K , Kamran Ali , Pratik Prakash
 | 4  | def printBooks(self, bkNode)  |Pratik  |Kamran  |-  |
 | -  | Deliverable preparation  |Anand  |Kamran  |-  |
 | -  | Final Review and Submission |Kamran  |Pratik  |-  |
+
+
+
+
+
+## For calling the script use below code :
+book = bookNode(0, 0)
+element = book.readBookList()
+book.printBooks()
