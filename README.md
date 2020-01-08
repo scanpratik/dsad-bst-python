@@ -15,7 +15,7 @@ Anand R K , Kamran Ali , Pratik Prakash
 | 1  | Binary Tree ADT Creation and Abstract Operation  |Pratik  |Kamran  | Done |
 | 1  | Sample Test & Inout file creation  |Anand  |Pratik  |-  |
 | 4  | Complexity Analysis  |Kamran  |Anand  |-  |
-| 2  | def _readBookList(self, bkID, availCount)  |Pratik  |Anand  |-  |
+| 2  | def _readBookList(self, bkID, availCount)  |Pratik  |Anand  | Done  |
 | 2  | def_chkInChkOut(self, bkID, inOut):   |Anand  |Kamran  |-  |
 | 2  | def _getTopBooks(self, bkNode):  |Kamran  |Pratik  |-  |
 | 3  | def _notIssued(self, bkNode)  |Pratik  |Kamran  |-  |
