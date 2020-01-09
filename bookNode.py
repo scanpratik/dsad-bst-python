@@ -1,4 +1,5 @@
 class bookNode:
+    count = 0
     def __init__(self, bkId , availCount):
         self.bookId = bkId
         self.availCount = availCount
@@ -25,28 +26,32 @@ class bookNode:
    
    #Retrieving book details from this libraray system as IN-ORDER traversal and write to outputPS6.txt,
     def _printBooks(self, bkNode):
-        #outFile = open('outputPS6.txt', 'w')
+
         outFile = open('outputPS6.txt', 'a')
+
+
         if self.left:
-            self.left._printBooks(bkNode)
-            
+            self.left._printBooks(self.right)
+
         if self.bookId:
-            outFile.write(str(self.bookId)+', '+ str(self.availCount) +'\n')
-        
+            outFile.write(str(self.bookId) + '\n')
+
         if self.right:
-            self.right._printBooks(bkNode)
+            self.right._printBooks(self.left)
+
+
         outFile.close()    
     
     def _notIssued(self, bkNode):
-        outFile = open('outputPS6.txt', 'w')
+
         outFile = open('outputPS6.txt', 'a')
         if self.bookId:
             if (self.checkoutCount == 0):
-                outFile.write(self.bookId +', '+ self.availCount)
+                outFile.write(str(self.bookId)+'\n')
         if self.left:
-            self.left._notIssued('')
+            self.left._notIssued(bkNode)
         if self.right:
-            self.right._notIssued('')
+            self.right._notIssued(bkNode)
         outFile.close()
     
     def _chkInChkOut(self, bkID, inOut):

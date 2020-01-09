@@ -24,6 +24,8 @@ def readPrompts(path):
         lines = file.readlines()
 
     for line in lines:
+        if line.isspace():
+            continue
         if (line.strip() == "ListTopBooks"):
             books._getTopBooks(books)
         elif (line.strip() == "BooksNotIssued"):
@@ -32,6 +34,8 @@ def readPrompts(path):
             books._stockOut(books)
         elif (line.strip() == "printInventory"):
             books._printBooks(books)
+        elif (line.strip() == "BooksNotIssued"):
+            books._notIssued(books)
         else:
             command, bookId = line.split(": ")
             if (command == "findBook"):
