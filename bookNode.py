@@ -76,7 +76,20 @@ class bookNode:
           
     
     def _getTopBooks(self, bkNode):
-        pass
+        bookIdCheckOutTuple = []
+        self._calculateBookIdCheckOutTuple(bookIdCheckOutTuple)
+
+        print(bookIdCheckOutTuple)
+        # TODO Do bubble sort 3 times and print
+
+    
+    def _calculateBookIdCheckOutTuple(self, bookIdCheckOutTuple):
+        if self.bookId:
+            bookIdCheckOutTuple.append((self.bookId, self.checkoutCount))
+        if self.left:
+            self.left._calculateBookIdCheckOutTuple(bookIdCheckOutTuple)
+        if self.right:
+            self.right._calculateBookIdCheckOutTuple(bookIdCheckOutTuple)
     
     def _findBook(self, eNode, bkID):
         pass
@@ -85,7 +98,6 @@ class bookNode:
         stockOut = []
         self._fetchStockOutBooks(stockOut)
         
-        #print(stockOut)
         if (len(stockOut) != 0):
             with open('outputPS6.txt', 'a') as file:
                 file.write("All available copies of the below books have been checked out:\n")
