@@ -31,13 +31,13 @@ class bookNode:
 
 
         if self.left:
-            self.left._printBooks(self.right)
+            self.left._printBooks(self)
 
         if self.bookId:
             outFile.write(str(self.bookId) + '\n')
 
         if self.right:
-            self.right._printBooks(self.left)
+            self.right._printBooks(self)
 
 
         outFile.close()    
