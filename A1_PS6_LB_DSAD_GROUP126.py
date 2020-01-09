@@ -18,18 +18,30 @@ books.PrintTree()
 
 
 """
-Perform Check In Check Out based on promptsPS6.txt
+Perform Operations based on promptsPS6.txt
 """
 
-def checkInCheckOut(path):
+def readPrompts(path):
     with open(path, 'r') as file:
         lines = file.readlines()
 
     for line in lines:
-        command, bookId = line.split(": ")
-        books._chkInChkOut(int(bookId), command)
+        if (line.trim() == "ListTopBooks"):
+            books._getTopBooks(books)
+        elif (line.trim() == "BooksNotIssued"):
+            books._notIssued(books)
+        elif (line.trim() == "ListStockOut"):
+            books._stockOut(books)
+        elif (line.trim() == "printInventory"):
+            books._printBooks(books)
+        else:
+            command, bookId = line.split(": ")
+            if (command == "findBook"):
+                books._findBook(books, bookId)
+            else:
+                books._chkInChkOut(int(bookId), command)
 
-checkInCheckOut("promptsPS6.txt")
+readPrompts("promptsPS6.txt")
 
 print("\n Post checkInCheckOut \n")
 books.PrintTree()

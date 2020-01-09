@@ -57,19 +57,19 @@ class bookNode:
             self.right._traverseTreeAndUpdate(bkID, inOut)
           
     
-    def getTopBooks(self, bkNode):
+    def _getTopBooks(self, bkNode):
         pass
     
-    def notIssued(self, bkNode):
+    def _notIssued(self, bkNode):
         pass
     
-    def findBook(self, eNode, bkID):
+    def _findBook(self, eNode, bkID):
         pass
     
-    def stockOut(self, eNode):
+    def _stockOut(self, eNode):
         pass
     
-    def printBooks(self, bkNode):
+    def _printBooks(self, bkNode):
         pass
 
 class InvalidOperationException(Exception): pass
