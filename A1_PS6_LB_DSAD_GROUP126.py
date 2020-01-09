@@ -14,8 +14,6 @@ def readBookList(path):
 
 books = bookNode(0,0)
 readBookList("inputPS6.txt")
-books.PrintTree()
-
 
 """
 Perform Operations based on promptsPS6.txt
@@ -26,13 +24,13 @@ def readPrompts(path):
         lines = file.readlines()
 
     for line in lines:
-        if (line.trim() == "ListTopBooks"):
+        if (line.strip() == "ListTopBooks"):
             books._getTopBooks(books)
-        elif (line.trim() == "BooksNotIssued"):
+        elif (line.strip() == "BooksNotIssued"):
             books._notIssued(books)
-        elif (line.trim() == "ListStockOut"):
+        elif (line.strip() == "ListStockOut"):
             books._stockOut(books)
-        elif (line.trim() == "printInventory"):
+        elif (line.strip() == "printInventory"):
             books._printBooks(books)
         else:
             command, bookId = line.split(": ")
@@ -42,6 +40,3 @@ def readPrompts(path):
                 books._chkInChkOut(int(bookId), command)
 
 readPrompts("promptsPS6.txt")
-
-print("\n Post checkInCheckOut \n")
-books.PrintTree()

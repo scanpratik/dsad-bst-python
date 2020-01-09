@@ -25,16 +25,16 @@ class bookNode:
    
    #Retrieving book details from this libraray system as IN-ORDER traversal and write to outputPS6.txt,
     def _printBooks(self, bkNode):
-        outFile = open('outputPS6.txt', 'w')
+        #outFile = open('outputPS6.txt', 'w')
         outFile = open('outputPS6.txt', 'a')
         if self.left:
-            self.left._printBooks()
+            self.left._printBooks(bkNode)
             
         if self.bookId:
-            outFile.write(self.bookId+', '+ self.availCount +'\n')
+            outFile.write(str(self.bookId)+', '+ str(self.availCount) +'\n')
         
         if self.right:
-            self.right._printBooks()  
+            self.right._printBooks(bkNode)
         outFile.close()    
     
     def _notIssued(self, bkNode):
@@ -82,7 +82,25 @@ class bookNode:
         pass
     
     def _stockOut(self, eNode):
-        pass
+        stockOut = []
+        self._fetchStockOutBooks(stockOut)
+        
+        #print(stockOut)
+        if (len(stockOut) != 0):
+            with open('outputPS6.txt', 'a') as file:
+                file.write("All available copies of the below books have been checked out:\n")
+                for id in stockOut:
+                    file.write(str(id) + "\n")
+
+    def _fetchStockOutBooks(self, stockOut):
+        if self.bookId:
+            if (self.availCount == 0):
+                stockOut.append(self.bookId)
+        if self.left:
+            self.left._fetchStockOutBooks(stockOut)
+        if self.right:
+            self.right._fetchStockOutBooks(stockOut)
+            
 
 
 class InvalidOperationException(Exception): pass
