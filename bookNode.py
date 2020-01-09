@@ -23,13 +23,31 @@ class bookNode:
             self.availCount = availCount
         return None
    
-   #TODO -- this method id just for testing , will remove later on .
-    def PrintTree(self):
+   #Retrieving book details from this libraray system as IN-ORDER traversal and write to outputPS6.txt,
+    def _printBooks(self):
+        outFile = open('outputPS6.txt', 'w')
+        outFile = open('outputPS6.txt', 'a')
         if self.left:
-            self.left.PrintTree()
-        print( str(self.bookId) +' -- ' + str(self.availCount))
+            self.left._printBooks()
+            
+        if self.bookId:
+            outFile.write(self.bookId+', '+ self.availCount +'\n')
+        
         if self.right:
-            self.right.PrintTree()     
+            self.right._printBooks()  
+        outFile.close()    
+    
+    def _notIssued(self, bkNode):
+        outFile = open('outputPS6.txt', 'w')
+        outFile = open('outputPS6.txt', 'a')
+        if self.bookId:
+            if (self.checkoutCount == 0):
+                outFile.write(self.bookId +', '+ self.availCount)
+        if self.left:
+            self.left._notIssued('')
+        if self.right:
+            self.right._notIssued('')
+        outFile.close()
     
     def _chkInChkOut(self, bkID, inOut):
         if (inOut == "checkOut"):
@@ -60,16 +78,11 @@ class bookNode:
     def _getTopBooks(self, bkNode):
         pass
     
-    def _notIssued(self, bkNode):
-        pass
-    
     def _findBook(self, eNode, bkID):
         pass
     
     def _stockOut(self, eNode):
         pass
-    
-    def _printBooks(self, bkNode):
-        pass
+
 
 class InvalidOperationException(Exception): pass
