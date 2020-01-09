@@ -24,7 +24,7 @@ class bookNode:
         return None
    
    #Retrieving book details from this libraray system as IN-ORDER traversal and write to outputPS6.txt,
-    def _printBooks(self):
+    def _printBooks(self, bkNode):
         outFile = open('outputPS6.txt', 'w')
         outFile = open('outputPS6.txt', 'a')
         if self.left:
