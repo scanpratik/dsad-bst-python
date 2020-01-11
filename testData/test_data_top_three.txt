@@ -1,4 +1,26 @@
 Case 1
+Input File Data
+100001, 9
+
+prompt Data
+checkOut: 100001
+checkOut: 100001
+ListTopBooks
+
+Case 2
+Input File Data
+100001, 9
+100002, 9
+
+prompt Data
+checkOut: 100001
+checkOut: 100001
+checkOut: 100001
+checkOut: 100002
+checkOut: 100002
+ListTopBooks
+
+Case 3
 
 Input File Data
 100001, 9
