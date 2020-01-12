@@ -19,10 +19,10 @@ Anand R K , Kamran Ali , Pratik Prakash
 | 2  | def _readBookList(self, bkID, availCount)  |Pratik  |Anand  | Done  |
 | 2  | def_chkInChkOut(self, bkID, inOut):   |kamran  |  | Done  |
 | 2  | def _getTopBooks(self, bkNode):  |Kamran  |Pratik  | In Progress  |
-| 3  | def _notIssued(self, bkNode)  |Pratik  |Kamran  | Done - with rectification for reverse print pending |
+| 3  | def _notIssued(self, bkNode)  |Pratik  |Kamran  | Done |
 | 3  | def _findBook(self, eNode, bkID)   |Anand  |Pratik  |-  |
 | 3  | def _stockOut(self, eNode)   |Kamran  |Anand  | Done  |
-| 4  | def printBooks(self, bkNode)  |Pratik  |Kamran  |Done - with rectification for reverse print pending  |
+| 4  | def printBooks(self, bkNode)  |Pratik  |Kamran  |Done |
 | -  | Deliverable preparation  |Anand  |Kamran  |-  |
 | -  | Final Review and Submission |Kamran  |Pratik  |-  |
 

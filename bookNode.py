@@ -84,8 +84,25 @@ class bookNode:
         bookIdCheckOutTuple = []
         self._calculateBookIdCheckOutTuple(bookIdCheckOutTuple)
 
-        print(bookIdCheckOutTuple)
-        # TODO Do bubble sort 3 times and print
+        #print(bookIdCheckOutTuple)
+        self._fetchTopThree(bookIdCheckOutTuple, 3)
+        #print(bookIdCheckOutTuple)
+
+        with open('outputPS6.txt', 'a') as file:
+                last = len(bookIdCheckOutTuple) - 1
+                for k in range(min(len(bookIdCheckOutTuple),3)):
+                    file.write(f"Top Books {k + 1}: {bookIdCheckOutTuple[last]} \n")
+                    last -= 1
+
+    
+    def _fetchTopThree(self, books, top):
+        n = len(books)
+
+        calc_top = min(n, top)
+        for i in range(calc_top):
+            for j in range(0, n-i-1):
+                if books[j][1] > books[j+1][1] :
+                    books[j], books[j+1] = books[j+1], books[j]
 
     
     def _calculateBookIdCheckOutTuple(self, bookIdCheckOutTuple):

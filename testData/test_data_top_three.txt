@@ -1,0 +1,57 @@
+Case 1
+Input File Data
+100001, 9
+
+prompt Data
+checkOut: 100001
+checkOut: 100001
+ListTopBooks
+
+Case 2
+Input File Data
+100001, 9
+100002, 9
+
+prompt Data
+checkOut: 100001
+checkOut: 100001
+checkOut: 100001
+checkOut: 100002
+checkOut: 100002
+ListTopBooks
+
+Case 3
+
+Input File Data
+100001, 9
+100002, 9
+100003, 9
+100004, 9
+100005, 9
+100006, 9
+
+prompt Data
+checkOut: 100001
+checkOut: 100001
+checkOut: 100001
+checkOut: 100001
+checkOut: 100001
+checkOut: 100001
+checkOut: 100001
+checkOut: 100002
+checkOut: 100002
+checkOut: 100002
+checkOut: 100002
+checkOut: 100002
+checkOut: 100002
+checkOut: 100003
+checkOut: 100003
+checkOut: 100003
+checkOut: 100004
+checkOut: 100004
+checkOut: 100005
+checkOut: 100006
+checkOut: 100006
+checkOut: 100006
+checkOut: 100006
+ListTopBooks
