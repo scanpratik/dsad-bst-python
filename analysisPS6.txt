@@ -1,0 +1,37 @@
+Perform an analysis for the questions above and give the running time in terms of input size: n :
+
+1. Which three books have been issued the greatest number of times?
+Complexity : implemented with method - def _getTopBooks(self, bkNode)
+
+Part 1: Traversing through BST to get all book and its checkout insight and prepare a list
+big-oh of n => 0(n)
+
+Part 2: Shoring ( Bubble ) till 3 elements for getting top 3 elements of book list
+(n-1) + (n-2) + (n-3) = 3n-6  that comes as :
+big-oh of n => 0(n)
+
+Hence ,
+
+Final Complexity = Complexity of part 1 + Complexity of part 2
+= big-oh of n  + big-oh of n =  big-oh of n => 0(n)
+==> big-oh of n => 0(n)
+
+2. Which books do not have any more copies left in the library (all copies have been issued)?
+Complexity : implemented with method - def _stockOut(self, eNode)
+
+big-oh of n => 0(n)
+
+3. Find out if a particular book is available in the library based on the book id.
+Complexity : implemented with method - def _findBook(self, eNode, bkID)
+
+Avg. Case = big-oh of log(n)=> 0(logn)
+Worst Case = big-oh of n => 0(n)
+
+4. Out of the entire set of books in the library, list the books that have never been checked out by
+students?
+Complexity : implemented with method - def _notIssued(self, bkNode)
+big-oh of n => 0(n)
+
+5. Print a list of all the books and available copies.
+Complexity : implemented with method - def _printBooks(self, bkNode)
+big-oh of n => 0(n)

@@ -1,0 +1,16 @@
+Top Books 1: 100001, 5 
+Top Books 2: 100003, 2 
+Top Books 3: 100005, 1 
+List of books not issued:
+100004
+100020
+Book id 100006 does not exist
+All available copies of the below books have been checked out:
+100001
+There are a total of 6 book titles in the library:
+100001, 0
+100002, 5
+100003, 13
+100004, 12
+100005, 2
+100020, 2
